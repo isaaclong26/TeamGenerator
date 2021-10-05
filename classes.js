@@ -57,12 +57,11 @@ export class manager extends employee {
     getOffice(teamMember) {
         inquirer
             .prompt([{
-                name: "office",
+                name: "Office",
                 message: "enter office number: "
             }])
             .then(answers => {
-                teamMember.office = answers;
-                console.log(teamMember)
+                teamMember.office = answers.Office;
                 printHtml(teamMember);
             })
     }
@@ -76,11 +75,11 @@ export class engineer extends employee {
     getGithub(teamMember) {
         inquirer
             .prompt([{
-                name: "git",
+                name: "GitHub",
                 message: "enter GitHub username: "
             }])
             .then(answers => {
-                teamMember.git = answers;
+                teamMember.git = answers.GitHub;
                 printHtml(teamMember)
 
             })
@@ -95,11 +94,11 @@ export class intern extends employee {
     getSchool(teamMember) {
         inquirer
             .prompt([{
-                name: "school",
+                name: "School",
                 message: "enter School: "
             }])
             .then(answers => {
-                teamMember.school = answers;
+                teamMember.school = answers.School;
                 printHtml(teamMember);
             })
     }

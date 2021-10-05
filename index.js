@@ -5,7 +5,7 @@ import chalk from "chalk";
 import { employee, intern, manager,engineer } from "./classes.js";
 import { printHtml, initPage, finishPage } from "./html.js";
 
-main();
+main()
 function newEmployee() {
     console.log("Welcome to the Team Builder ");
     inquirer
@@ -76,7 +76,7 @@ export function addAnother(){
           {name: "more", message: "Add another Team Member?", type: "list", choices: ["Yes","No"]}
       ])
       .then(answers => {
-          console.log("i got here");
+          
           if(answers.more=="Yes"){
               newEmployee();
           }
@@ -87,5 +87,6 @@ export function addAnother(){
               console.log("Veiw your team on index.html")
             }
       })
+  } ;
 
 
